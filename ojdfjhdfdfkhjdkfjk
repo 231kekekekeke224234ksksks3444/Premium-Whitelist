@@ -1,1 +1,24 @@
-loadstring(game:HttpGet("https://pst.innomi.net/paste/af582bk7v3xkvedmh8b42v64/raw"))()
+local jogador = game.Players.LocalPlayer
+local nomeJogador = jogador.Name
+
+local function verificarBlacklist(nome)
+    local blacklist = {
+        "Ahmedbastan99",
+        "dasadsads_3"
+    }
+
+    for _, blacklistedName in ipairs(blacklist) do
+        if nome == blacklistedName then
+            jogador:Kick("Hello Ahmedbastan99, why are you using auto farm script to get to the top? That's ugly my friend, give up, you tried to pass me in season 1 and couldn't. PLEASE GO TO SKINNY DM TO REQUEST UNBLACKLIST (YOU WILL HAVE TO PAY IN ROBUX)")
+            return true
+        end
+    end
+    return false
+end
+
+if verificarBlacklist(nomeJogador) then
+    return
+else
+    local scriptURL = "https://pst.innomi.net/paste/af582bk7v3xkvedmh8b42v64/raw"
+    loadstring(game:HttpGet(scriptURL))()
+end
