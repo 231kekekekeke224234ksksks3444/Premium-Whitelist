@@ -4,7 +4,6 @@ local nomeJogador = jogador.Name
 local function verificarBlacklist(nome)
     local blacklist = {
         "Ahmedbastan99",
-        "dasadsads_3"
     }
 
     for _, blacklistedName in ipairs(blacklist) do
